@@ -1,29 +1,31 @@
 {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        dependencies = { "nvim-lua/plenary.nvim", 'nvim-telescope/telescope.nvim' },
+        dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
                 local harpoon = require("harpoon")
                 harpoon:setup()
-                
-                -- basic telescope configuration
-                local conf = require("telescope.config").values
-                local function toggle_telescope(harpoon_files)
-                        local file_paths = {}
-                        for _, item in ipairs(harpoon_files.items) do
-                                table.insert(file_paths, item.value)
-                        end
-
-                        require("telescope.pickers").new({}, {
-                                prompt_title = "Harpoon",
-                                finder = require("telescope.finders").new_table({
-                                        results = file_paths,
-                                }),
-                                previewer = conf.file_previewer({}),
-                                sorter = conf.generic_sorter({}),
-                        }):find()
-                end
-                
-                vim.keymap.set("n", "<leader>hm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+        end,
+        keys = {
+        { "<leader>a", function() 
+            local harpoon = require("harpoon")
+            harpoon.ui:toggle_quick_menu(harpoon:list())
+        end,
+        desc = "harpoon quick menu", },
+        { "<leader>a", function()
+            require("harpoon"):list():append()
         end
+        , desc = "harpoon add file", },
+        { "<C-j>", function()
+            local harpoon = require("harpoon")
+            harpoon.ui:nav_next(harpoon:list())
+        end,
+        desc = "harpoon next", },
+        { "<C-k>", function()
+            local harpoon = require("harpoon")
+            harpoon.ui:nav_prev(harpoon:list())
+        end,
+        desc = "harpoon next", },
+
+        }
 }
