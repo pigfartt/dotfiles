@@ -13,17 +13,17 @@
 		"custom/arrow9",
 		"pulseaudio",
 		"custom/arrow8",
-		"network",
+        "custom/brightness",
 		"custom/arrow7",
-		"memory",
+        "network",
 		"custom/arrow6",
-		"cpu",
+        "memory",
 		"custom/arrow5",
-		"temperature",
+        "cpu",
 		"custom/arrow4",
-		"battery",
+        "temperature",
 		"custom/arrow3",
-		"sway/language",
+        "battery",
 		"custom/arrow2",
 		"tray",
 		"clock#date",
@@ -78,6 +78,13 @@
 			"critical": 90
 		}
 	},
+
+    "custom/brightness": {
+            "format": "  {}%",
+            "interval": 1,
+            //"exec": "waybar-brightness"
+            "exec": "waybar-brightness-watch"
+    },
 
 	"sway/language": {
 		"format": " {}",

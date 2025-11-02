@@ -57,12 +57,12 @@
 @define-color focused	@braqua;
 @define-color inactive	@purple;
 @define-color sound	@brpurple;
-@define-color network	@purple;
-@define-color memory	@braqua;
-@define-color cpu	@green;
-@define-color temp	@brgreen;
-@define-color layout	@bryellow;
-@define-color battery	@aqua;
+@define-color brightness	@purple;
+@define-color network	@braqua;
+@define-color memory	@green;
+@define-color cpu	@brgreen;
+@define-color battery	@bryellow;
+@define-color temp	@aqua;
 @define-color date	@black;
 @define-color time	@white;
 
@@ -98,7 +98,7 @@
 #pulseaudio,
 #temperature,
 #tray,
-#backlight,
+#custom-brightness,
 #idle_inhibitor,
 #disk,
 #user,
@@ -175,6 +175,11 @@
 	margin-left: 35pt;
 }
 
+#custom-brightness {
+        background: @brightness;
+        color: @white;
+}
+
 #pulseaudio {
 	background: @sound;
 	color: @black;
@@ -182,32 +187,27 @@
 
 #network {
 	background: @network;
-	color: @white;
+	color: @black;
 }
 
 #memory {
 	background: @memory;
-	color: @black;
+	color: @white;
 }
 
 #cpu {
 	background: @cpu;
-	color: @white;
+	color: @black;
 }
 
 #temperature {
 	background: @temp;
-	color: @black;
-}
-
-#language {
-	background: @layout;
-	color: @black;
+	color: @white;
 }
 
 #battery {
 	background: @battery;
-	color: @white;
+	color: @black;
 }
 
 #tray {
@@ -233,42 +233,42 @@
 #custom-arrow2 {
 	font-size: 11pt;
 	color: @date;
-	background: @layout;
-}
-
-#custom-arrow3 {
-	font-size: 11pt;
-	color: @layout;
 	background: @battery;
 }
 
-#custom-arrow4 {
+#custom-arrow3 {
 	font-size: 11pt;
 	color: @battery;
 	background: @temp;
 }
 
-#custom-arrow5 {
+#custom-arrow4 {
 	font-size: 11pt;
 	color: @temp;
 	background: @cpu;
 }
 
-#custom-arrow6 {
+#custom-arrow5 {
 	font-size: 11pt;
 	color: @cpu;
 	background: @memory;
 }
 
-#custom-arrow7 {
+#custom-arrow6 {
 	font-size: 11pt;
 	color: @memory;
 	background: @network;
 }
 
-#custom-arrow8 {
+#custom-arrow7 {
 	font-size: 11pt;
 	color: @network;
+	background: @brightness;
+}
+
+#custom-arrow8 {
+	font-size: 11pt;
+	color: @brightness;
 	background: @sound;
 }
 
