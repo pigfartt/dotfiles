@@ -1,5 +1,5 @@
 #
-# ~/.bashrc
+#~/.bashrc
 #
 
   eval "$(starship init bash)"
@@ -25,6 +25,7 @@ alias oracleup='ssh opc@207.211.163.6 -i ~/.ssh/ssh-key-2025-04-30.key'
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export NOTEBOOK_DIR="$HOME/notes"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
