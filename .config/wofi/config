@@ -1,0 +1,5 @@
+
+[wofi]
+insensitive=true
+matching=fuzzy
+width=30%
