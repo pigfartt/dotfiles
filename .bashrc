@@ -20,12 +20,16 @@ startAndDisown() {
 	$1 &
 	disown $!
 }
+field() {
+    awk -F "${2:- }" "{ print \$${1:-1} }"
+}
 alias dis=startAndDisown
 alias oracleup='ssh opc@207.211.163.6 -i ~/.ssh/ssh-key-2025-04-30.key'
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export NOTEBOOK_DIR="$HOME/notes"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" yazi
