@@ -22,12 +22,15 @@ Scope {
                 anchors.fill: parent
                 spacing: 0
 
+
                 Item { Layout.fillWidth: true }
+
                 AudioWidget { Layout.fillHeight: true }
                 VpnWidget { Layout.fillHeight: true }
                 NetWidget { Layout.fillHeight: true }
                 CpuWidget { Layout.fillHeight: true }
                 MemWidget { Layout.fillHeight: true }
+                NosleepWidget{ Layout.fillHeight: true }
                 DateWidget { Layout.fillHeight: true }
                 ClockWidget { Layout.fillHeight: true }
             }

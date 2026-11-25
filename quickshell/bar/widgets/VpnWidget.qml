@@ -20,7 +20,7 @@ Pill {
         Text {
             text: "ts"
             color: Network.allVpns.includes("Tailscale")
-                ? Theme.accent : Theme.gruvbox.bg3
+                ? Theme.accent : Theme.gruvbox.bg4
             font.family: Theme.fontFamily
             font.pixelSize: Theme.fontSize
         }
@@ -28,7 +28,7 @@ Pill {
         Text {
             text: "ftecs"
             color: Network.vpns.some(s => s.includes("ftecs"))
-                ? Theme.accent : Theme.gruvbox.bg3
+                ? Theme.accent : Theme.gruvbox.bg4
             font.family: Theme.fontFamily
             font.pixelSize: Theme.fontSize
         }
@@ -36,7 +36,7 @@ Pill {
         Text {
             text: "\udb81\udd82"
             color: Network.vpns.some(s => !s.includes("ftecs"))
-                ? Theme.accent : Theme.gruvbox.bg3
+                ? Theme.accent : Theme.gruvbox.bg4
             font.family: Theme.fontFamily
             font.pixelSize: Theme.fontSize
         }

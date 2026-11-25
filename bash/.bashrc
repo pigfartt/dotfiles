@@ -12,6 +12,7 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # alias stuff:
+alias 7zip='7z'
 alias mv='mv -i'
 alias battery='~/.local/bin/battery_status.sh'
 alias ftecsup='nmcli c up "ftecs-sslvpn" --ask'
